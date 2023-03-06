@@ -74,7 +74,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appi
         //Number(1.3450001).toFixed(2); // 1.35
     }
 
-    for(i = 0; i<6; i++){
+    for(i = 0; i<5; i++){
         document.getElementById("day" + (i+1) + "Max").innerHTML = "Max: " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°C";
     }
 
@@ -102,8 +102,8 @@ var weekday = ["Sunday", "  Monday  ", "Tuesday", "Wednesday", "Thursday", "Frid
 
 
 function CheckDay(day){
-    if(day + d.getDay() > 7){
-        return day + d.getDay() - 8;
+    if(day + d.getDay() > 6){
+        return day + d.getDay() - 7;
     }
     else{
         return day + d.getDay();
